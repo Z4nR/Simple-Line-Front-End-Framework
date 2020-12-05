@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+	content="ie=edge">
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
+	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" 
+	crossorigin="anonymous">
+	<style>
+		body{
+			margin-top: 15px;
+			background: #333;
+			color: #fff;
+		}
+		#isInClientMessage{
+			text-align: center;
+		}
+	</style>
+	<title>Temperature Converter</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<h1 class="display-4 text-center mb-3">
+					Temperature Converter
+				</h1>
+				<form>
+					<div class="card mb-2">
+						<input 
+						id="celInput"
+						type="integer" 
+						class="card-block" 
+						placeholder="Enter Celcius..."
+						>
+					</div>
+				</form>
+				<div id="output">
+					<div class="card card-success mb-2">
+						<div class="card-block">
+							<h4>Fahrenheit :</h4>
+							<div id="fahOutput"></div>
+						</div>
+					</div>
+
+					<div class="card card-danger mb-2">
+						<div class="card-block">
+							<h4>Kelvin :</h4>
+							<div id="kelOutput"></div>
+						</div>
+					</div>
+
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+							<h4>Reamur :</h4>
+							<div id="reaOutput"></div>
+						</div>
+					</div>
+				</div>
+				<div id="liffAppContent">
+            		<div class="buttonGroup mb-2 text-center">
+                		<div class="buttonRow">
+                    		<button id="openWindowButton" class="btn btn-success btn-small">Open External</button>
+                    		<button id="closeWindowButton" class="btn btn-danger btn-small">Close LIFF App</button>
+                		</div>
+                	</div>
+            		<div id="statusMessage">
+                		<div id="isInClientMessage"></div>
+           			</div>
+            		<div id="liffData">
+                		<table>
+                    		<tr>
+                        		<th id="isInClient" class="textLeft"></th>
+                    		</tr>
+                		</table>
+            		</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="index.js"></script>
+	<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+	<script src="liff-starter.js"></script>
+</html>
